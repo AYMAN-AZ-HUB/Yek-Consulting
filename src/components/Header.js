@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { LaptopIcon, MenuIcon, MoonIcon, SunIcon, CloseIcon } from './icons';
+import { LaptopIcon, MenuIcon, SunIcon, CloseIcon } from './icons';
 import { MdOutlineDarkMode } from "react-icons/md";
 import "./ui/Header.css";
 
