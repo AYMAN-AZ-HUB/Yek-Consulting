@@ -3,7 +3,7 @@ import React from "react";
 const Discover = () => {
   return (
     <div className="w-4/5 m-auto cursor-default">
-      <h1 className="text-4xl font-bold text-center">Synergies stratégiques pour une croissance durable</h1>
+      <h1 className="text-4xl font-bold text-center mt-8">Synergies stratégiques pour une croissance durable</h1>
       <div className="w-full m-auto flex flex-col md:flex-row space-y-10 md:space-x-10 justify-between items-center py-10">
         <div className="w-full space-y-5">
           <img
