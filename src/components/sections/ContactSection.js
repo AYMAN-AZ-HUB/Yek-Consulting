@@ -18,7 +18,7 @@ export default function ContactSection() {
                                 <div>
                                     <p className="font-medium text-lg text-gray-900 dark:text-white">Adresse</p>
                                     <p className="text-gray-700 dark:text-gray-300 text-base">
-                                        [Votre adresse ici]
+                                    43 Rue d'Aulnay, 95500 GONESSE
                                     </p>
                                 </div>
                             </div>
@@ -28,7 +28,7 @@ export default function ContactSection() {
                                     <p className="font-medium text-lg text-gray-900 dark:text-white">Email</p>
                                     <p className="text-gray-700 dark:text-gray-300 text-base">
                                         <a href="mailto:support@example.com" className="text-blue-500 dark:text-blue-300">
-                                            [Votre email ici]
+                                        contact@yekconseil.fr
                                         </a>
                                     </p>
                                 </div>
@@ -39,7 +39,7 @@ export default function ContactSection() {
                                     <p className="font-medium text-lg text-gray-900 dark:text-white">Téléphone</p>
                                     <p className="text-gray-700 dark:text-gray-300 text-base">
                                         <a href="tel:+15555555555" className="text-blue-500 dark:text-blue-300">
-                                            [Votre numéro de téléphone ici]
+                                        +33 1 39 85 91 68
                                         </a>
                                     </p>
                                 </div>
