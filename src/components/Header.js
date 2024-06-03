@@ -17,7 +17,7 @@ const Header = () => {
                 <MenuIcon className="h-6 w-6" />
             </button>
             <div>
-                <img src={logo} className='h-11 w-32'></img>
+                <a href='/'><img src={logo} className='h-11 w-32 cursor-pointer'></img></a>
             </div>
             <nav className="hidden md:flex items-center gap-6">
                 <ul className="flex">
