@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { LaptopIcon, MenuIcon, MoonIcon, SunIcon, CloseIcon } from './icons';
+import { MdOutlineDarkMode } from "react-icons/md";
 import "./ui/Header.css";
 
 const Header = () => {
@@ -31,7 +32,7 @@ const Header = () => {
             <div>
                 <Link to="/" className="flex items-center gap-2">
                     <LaptopIcon className="h-6 w-6" />
-                    <span className="text-lg font-semibold">YEK Consulting</span>
+                    <span className="text-lg font-semibold ">YEK Consulting</span>
                 </Link>
             </div>
             <nav className="hidden md:flex items-center gap-6">
@@ -43,7 +44,7 @@ const Header = () => {
                 </ul>
             </nav>
             <button onClick={toggleTheme} className="mode flex">
-                {theme === "light" ? <MoonIcon className="h-5 w-5" /> : <SunIcon className="h-5 w-5" />}
+                {theme === "light" ? <MdOutlineDarkMode className="h-6 pb-1 w-6" /> : <SunIcon className="h-5 w-5" />}
             </button>
             {showModal && (
                 <div className="fixed">

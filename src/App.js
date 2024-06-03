@@ -3,9 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import './App.css';
 import Main from './components/Main';
-
-import Footer from './components/Footer';
-
 import Footer from './components/ui/Footer/Footer';
 
 import { ThemeProvider } from './contexts/ThemeContext';

@@ -22,7 +22,7 @@ body {
     background-color: var(--color-bg);
     color: var(--color-text);
 }
-=======
+
 :root {
     --primary: #000;
     --secondary: rgb(24 24 27);
@@ -86,7 +86,6 @@ body.light {
 }
 .message{
     color: var(--color-text);
-=======
     background-color: var(--primary);
 }
 
