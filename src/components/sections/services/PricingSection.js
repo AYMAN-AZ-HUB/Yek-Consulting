@@ -9,7 +9,7 @@ export default function PricingSection() {
     return (
         <section className="py-12 md:py-16">
             <div className="container mx-auto px-4 md:px-6">
-                <h2 className="text-2xl text-center md:text-3xl font-bold mb-8">Services</h2>
+                <h2 className="text-2xl text-center md:text-3xl font-bold mb-8">Nos Domaines d'interventions</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
  
                     <PricingCard
