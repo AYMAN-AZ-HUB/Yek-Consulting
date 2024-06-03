@@ -9,10 +9,9 @@ const Hero = () => {
       <div>
       <h2 className="text-lg md:text-1xl mb-10">Profitez d’une consultation juridique avec des experts en droit en toute simplicité. Ou que vous soyez, <br/>vous pouvez maintenant avoir des réponses à toutes vos questions.  </h2>
       </div>
-      <a href="/consultation"><button className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded transition duration-300 ease-in-out">
-            Join Us Now
+      <a href="/consultation"><button className="bg-blue-500 hover:bg-blue-800 text-white px-4 py-2 rounded transition duration-300 ease-in-out">
+            Consultez-nous
             </button></a>
-        
         </div>
     </div>    )
     }
