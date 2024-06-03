@@ -11,7 +11,7 @@ const socialMediaIcons = [
 const footerSections = [
   {
     title: "YEK conseil",
-    content: "We are the best consulting firm in the world",
+    content: "We are the best consulting firm in the world ?",
     footerText: "@yekconseil 2024 All rights Reserved",
     links: [
       { label: "Resources", url: "#" },
