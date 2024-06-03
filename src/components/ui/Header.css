@@ -6,6 +6,7 @@ header.flex {
     justify-content: space-between;
     padding: 0 2.4rem;
     margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 
@@ -26,20 +27,16 @@ header button.menu {
 
 header .icon-menu,
 header button.mode {
-    background-color: var(--bgHeader);
     height: 2.4rem;
     width: 2.4rem;
     padding-top: 4px;
     border-radius: 50%;
     justify-content: center;
     color: var(--subtitle);
-    border: 2px solid rgba(15, 81, 236, 0.25);
 }
 
 header .icon-menu:hover,
 header button.mode:hover {
-    color: var(--title);
-    border: 1px solid rgb(9, 148, 255);
     transition: 0.2s;
 }
 

@@ -77,7 +77,9 @@ const Contactus = () => {
       </div>
     </div>
   );
-}
+};
+
+
 
 function BuildingIcon(props) {
   return (

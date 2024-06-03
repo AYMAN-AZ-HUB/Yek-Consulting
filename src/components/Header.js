@@ -1,30 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { LaptopIcon, MenuIcon, MoonIcon, SunIcon, CloseIcon } from './icons';
+import { LaptopIcon, MenuIcon, SunIcon, CloseIcon } from './icons';
+import { MdOutlineDarkMode } from "react-icons/md";
+import { ThemeContext } from '../contexts/ThemeContext';
 import "./ui/Header.css";
 
 const Header = () => {
+    const { theme, toggleTheme } = useContext(ThemeContext);
     const [showModal, setShowModal] = useState(false);
-    const [theme, setTheme] = useState(localStorage.getItem("currentMode") ?? "dark");
-
-    useEffect(() => {
-        if (theme === "light") {
-            document.body.classList.remove("dark");
-            document.body.classList.add("light");
-        } else {
-            document.body.classList.remove("light");
-            document.body.classList.add("dark");
-        }
-    }, [theme]);
-
-    const toggleTheme = () => {
-        const newTheme = theme === "dark" ? "light" : "dark";
-        localStorage.setItem("currentMode", newTheme);
-        setTheme(newTheme);
-    };
 
     return (
-        <header className="flex justify-between items-center py-4 px-6 md:px-8">
+        <header className="flex justify-between items-center py-4 px-6 md:px-8 text-center mb">
             <button onClick={() => setShowModal(true)} className="menu icon-menu md:hidden">
                 <MenuIcon className="h-6 w-6" />
             </button>
@@ -43,7 +29,7 @@ const Header = () => {
                 </ul>
             </nav>
             <button onClick={toggleTheme} className="mode flex">
-                {theme === "light" ? <MoonIcon className="h-5 w-5" /> : <SunIcon className="h-5 w-5" />}
+                {theme === "light" ? <MdOutlineDarkMode className="h-6 pb-1 w-6" /> : <SunIcon className="h-5 w-5" />}
             </button>
             {showModal && (
                 <div className="fixed">
