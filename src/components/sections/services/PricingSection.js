@@ -96,4 +96,4 @@ function PricingCard({ title, description, price, features, icon: Icon }) {
             </CardContent>
         </Card>
     );
-}   
+}
