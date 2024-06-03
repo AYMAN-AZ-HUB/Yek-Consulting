@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../../ui/Card';
 import { CheckIcon } from '../../icons';
 import { FaSearch, FaUsers, FaPenFancy } from "react-icons/fa";
 import { FaBoltLightning, FaMapLocationDot, FaRegHandshake } from "react-icons/fa6";
+import { ThemeContext } from '../../../contexts/ThemeContext.js'; // Assuming themeContext.js is in the same directory
 import "./services.css";
 
 export default function PricingSection() {
@@ -71,8 +72,11 @@ export default function PricingSection() {
 }
 
 function PricingCard({ title, description, price, features, icon: Icon }) {
+    const { theme } = useContext(ThemeContext);
+    const darkMode = theme === 'dark';
+
     return (
-        <Card className="pricing-card">
+        <Card className={`pricing-card ${darkMode ? 'dark' : ''}`}>
             <CardHeader>
                 <div className="box">
                     <div className="flex items-center justify-center gap-2">
@@ -86,8 +90,8 @@ function PricingCard({ title, description, price, features, icon: Icon }) {
                 <div className="text-4xl font-bold mb-2">{price}</div>
                 <ul className="space-y-2 mb-8">
                     {features.map((feature, index) => (
-                        <li key={index} className="flex items-center gap-2 text-black">
-                            <CheckIcon className="h-6 w-10 text-green-500" />
+                        <li key={index} className="flex items-center gap-2">
+                            <CheckIcon className={`h-6 w-10 ${darkMode ? 'text-white' : 'text-black'}`} />
                             {feature}
                         </li>
                     ))}
