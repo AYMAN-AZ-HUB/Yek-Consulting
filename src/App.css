@@ -2,7 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-
 /* Vos styles personnalisés vont ici */
 html.light {
     --color-bg: #fff;
@@ -65,7 +64,6 @@ body.light {
 }
 
 .bg-gray-100 {
-
     background-color: var(--color-bg);
 }
 
@@ -86,6 +84,7 @@ body.light {
 }
 .message{
     color: var(--color-text);
+
     background-color: var(--primary);
 }
 
