@@ -10,7 +10,7 @@ const Header = () => {
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <header className="flex justify-between items-center py-4 px-6 md:px-8 text-center mb">
+        <header className="flex justify-between items-center py-4 px-6 md:px-8 text-center">
             <button onClick={() => setShowModal(true)} className="menu icon-menu md:hidden">
                 <MenuIcon className="h-6 w-6" />
             </button>
