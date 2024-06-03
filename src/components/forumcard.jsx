@@ -51,17 +51,18 @@ export default function Component() {
             Your Informations
           </div>
         </div>
-        <div className="flex-1 p-8">
+        <div className="flex-1 p-6">
           {activeSection === "take-interview" && (
-            <div>
+            <div >
               <h2 className="text-2xl font-bold mb-4">Take Interview</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
               <div className="flex items-center space-x-4">
                 <img src={profile1} alt="Profile" className="w-24 h-24 mb-3 rounded-full" />
                 <div>
-                  <h3 className="text-xl font-bold">John Doe</h3>
+                  <h3 className="text-sm font-bold">John Doe</h3>
                   <button
                     onClick={() => handleSelectClick("dayandhour")}
-                    className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+                    className="mt-2 bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600"
                   >
                     Select
                   </button>
@@ -70,10 +71,22 @@ export default function Component() {
               <div className="flex items-center space-x-4">
                 <img src={profile2} alt="Profile" className="w-24 h-24 mb-3 rounded-full" />
                 <div>
-                  <h3 className="text-xl font-bold">Jack Doe</h3>
+                  <h3 className="text-sm font-bold">Melanie Doe</h3>
                   <button
                     onClick={() => handleSelectClick("dayandhour")}
-                    className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+                    className="mt-2 bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <img src={profile2} alt="Profile" className="w-24 h-24 mb-3 rounded-full" />
+                <div>
+                  <h3 className="text-sm font-bold">Joe Doe</h3>
+                  <button
+                    onClick={() => handleSelectClick("dayandhour")}
+                    className="mt-2 bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600"
                   >
                     Select
                   </button>
@@ -82,16 +95,17 @@ export default function Component() {
               <div className="flex items-center space-x-4">
                 <img src={profile3} alt="Profile" className="w-24 h-24 rounded-full" />
                 <div>
-                  <h3 className="text-xl font-bold">Sven Doe</h3>
+                  <h3 className="text-sm font-bold">Sven Doe</h3>
                   <button
                     onClick={() => handleSelectClick("dayandhour")}
-                    className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+                    className="mt-2 bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600"
                   >
                     Select
                   </button>
                 </div>
               </div>
             </div>
+          </div>
           )}
           {activeSection === "dayandhour" && (
             <div>
