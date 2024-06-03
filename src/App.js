@@ -60,7 +60,7 @@ function App() {
                                 fontSize: '24px'
                             }}
                         >
-                            <IoIosArrowDropup />
+                            <IoIosArrowDropup/>
                         </button>
                     )}
                 </div>
