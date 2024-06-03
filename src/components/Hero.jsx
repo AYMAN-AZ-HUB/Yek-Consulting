@@ -1,5 +1,6 @@
 import React from 'react'
 import heroImg from '../imgs/IT.jpg'
+import { Link } from 'react-router-dom'
 const Hero = () => {
   return (
     <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: `url(${heroImg})` }}>
@@ -12,6 +13,11 @@ const Hero = () => {
       <a href="/consultation"><button className="bg-blue-500 hover:bg-blue-800 text-white px-4 py-2 rounded transition duration-300 ease-in-out">
             Consultez-nous
             </button></a>
+      <Link to="/contactus">
+      <button className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded transition duration-300 ease-in-out">
+            Contactez Nous
+            </button>
+        </Link>
         </div>
     </div>    )
     }
