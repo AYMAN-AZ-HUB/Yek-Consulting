@@ -4,7 +4,7 @@ import { PiLightbulbFilament } from 'react-icons/pi';
 const ResponsiveComponent = () => {
   return (
     <div className="mt-12 text-center">
-      <h1 className="text-4xl uppercase font-extrabold mb-12 text-black-800 mt-8">Nos prestations en droit de l'énergie</h1>
+      <h1 className="text-4xl uppercase font-extrabold mb-12 text-black-800 mt-8">Nos Services</h1>
       <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-16">
         <div className="text-center transform transition-transform duration-300 hover:scale-110">
           <FaSearch className="w-16 h-16 cursor-pointer mx-auto text-[#c8b291]" />

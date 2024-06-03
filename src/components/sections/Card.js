@@ -21,7 +21,7 @@ export default function Latest() {
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-9">
       <div className="text-center mt-8 font-bold text-xl md:text-2xl">
-        ARTICLES RÉCENTS
+        Nos Avocats
       </div>
       <p className="text-center text-white mt-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla nunc in molestie feugiat. Nunc auctor consectetur elit, quis pulvinar.
