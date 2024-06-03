@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { LaptopIcon, MenuIcon, SunIcon, CloseIcon } from './icons';
 import { MdOutlineDarkMode } from "react-icons/md";
 import { ThemeContext } from '../contexts/ThemeContext';
-import logo from '../assests/yek.png'
+import logo from '../assests/yek-removebg-preview.png'
 
 import "./ui/Header.css";
 
