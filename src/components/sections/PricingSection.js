@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/Card';
 import { CheckIcon } from '../icons';
 import { DatabaseIcon, CpuIcon, CodeIcon, ShieldIcon } from '../icons';
-
+ 
 export default function PricingSection() {
     return (
         <section className="py-12 md:py-16">
@@ -42,14 +42,13 @@ export default function PricingSection() {
         </section>
     );
 }
-
+ 
 function PricingCard({ title, description, price, features, icon: Icon }) {
     return (
         <Card className='shadow-lg shadow-gray-600 hover:scale-125'>
             <CardHeader>
                 <div className="flex items-center justify-center gap-2">
                     <Icon className="h-7 w-7 text-green-600" />
-
                     <CardTitle className='text-center text-xl text-black'>{title}</CardTitle>
                 </div>
                 <CardDescription>{description}</CardDescription>
@@ -68,3 +67,4 @@ function PricingCard({ title, description, price, features, icon: Icon }) {
         </Card>
     );
 }
+  
