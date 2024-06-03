@@ -1,7 +1,7 @@
-import { useState } from "react"
-import profile1 from '../assests/profil1.png'
-import profile2 from '../assests/profil2.png'
-import profile3 from '../assests/profil3.png'
+import { useState } from "react";
+import profile1 from '../assests/profil1.png';
+import profile2 from '../assests/profil2.png';
+import profile3 from '../assests/profil3.png';
 
 const Card = ({ children, className }) => {
   return (
@@ -12,13 +12,14 @@ const Card = ({ children, className }) => {
 };
 
 export default function Component() {
-  const [activeSection, setActiveSection] = useState("take-interview")
+  const [activeSection, setActiveSection] = useState("take-interview");
+
   const handleSectionClick = (section) => {
-    setActiveSection(section)
+    setActiveSection(section);
   };
 
-  const handleSelectClick = () => {
-    setActiveSection("dayandhour");
+  const handleSelectClick = (nextSection) => {
+    setActiveSection(nextSection);
   };
 
   return (
@@ -53,59 +54,134 @@ export default function Component() {
         <div className="flex-1 p-8">
           {activeSection === "take-interview" && (
             <div>
-            <h2 className="text-2xl font-bold mb-4">Take Interview</h2>
-            <div className="flex items-center space-x-4">
-              <img src={profile1} alt="Profile" className="w-24 h-24 mb-3 rounded-full" />
-              <div>
-                <h3 className="text-xl font-bold">John Doe</h3>
-                <button
-                  onClick={handleSelectClick}
-                  className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
-                >
-                  Select
-                </button>
+              <h2 className="text-2xl font-bold mb-4">Take Interview</h2>
+              <div className="flex items-center space-x-4">
+                <img src={profile1} alt="Profile" className="w-24 h-24 mb-3 rounded-full" />
+                <div>
+                  <h3 className="text-xl font-bold">John Doe</h3>
+                  <button
+                    onClick={() => handleSelectClick("dayandhour")}
+                    className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <img src={profile2} alt="Profile" className="w-24 h-24 mb-3 rounded-full" />
+                <div>
+                  <h3 className="text-xl font-bold">Jack Doe</h3>
+                  <button
+                    onClick={() => handleSelectClick("dayandhour")}
+                    className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <img src={profile3} alt="Profile" className="w-24 h-24 rounded-full" />
+                <div>
+                  <h3 className="text-xl font-bold">Sven Doe</h3>
+                  <button
+                    onClick={() => handleSelectClick("dayandhour")}
+                    className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+                  >
+                    Select
+                  </button>
+                </div>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <img src={profile2} alt="Profile" className="w-24 h-24 mb-3 rounded-full" />
-              <div>
-                <h3 className="text-xl font-bold">Jack Doe</h3>
-                <button
-                  onClick={handleSelectClick}
-                  className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
-                >
-                  Select
-                </button>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <img src={profile3} alt="Profile" className="w-24 h-24 rounded-full" />
-              <div>
-                <h3 className="text-xl font-bold">Sven Doe</h3>
-                <button
-                  onClick={handleSelectClick}
-                  className="mt-2 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
-                >
-                  Select
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+          )}
           {activeSection === "dayandhour" && (
             <div>
-              <h2 className="text-2xl font-bold mb-4">Day And Hour </h2>
-              <p>This is the content for the Day section. You can customize it as needed.</p>
+              <h2 className="text-2xl font-bold mb-4">Day And Hour</h2>
+              <form>
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="day">
+                    Day
+                  </label>
+                  <input
+                    type="date"
+                    id="day"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="hour">
+                    Hour
+                  </label>
+                  <input
+                    type="time"
+                    id="hour"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => handleSelectClick("Your informations")}
+                  className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+                >
+                  Select
+                </button>
+              </form>
             </div>
           )}
           {activeSection === "Your informations" && (
             <div>
               <h2 className="text-2xl font-bold mb-4">Your Informations</h2>
-              <p>This is the content for the Hour section. You can customize it as needed.</p>
+              <form>
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="secondName">
+                    Second Name
+                  </label>
+                  <input
+                    type="text"
+                    id="secondName"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+                >
+                  Submit
+                </button>
+              </form>
             </div>
           )}
         </div>
       </Card>
     </div>
-  )
+  );
 }
