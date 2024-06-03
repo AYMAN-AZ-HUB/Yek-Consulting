@@ -1,6 +1,7 @@
 import React from 'react';
 import ServicesSection from './sections/ServicesSection';
 import PricingSection from './sections/PricingSection';
+import PricingSection from './sections/services/PricingSection';
 import ContactSection from './sections/ContactSection';
 
 export default function Main() {
