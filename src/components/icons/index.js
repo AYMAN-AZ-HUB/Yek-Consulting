@@ -174,6 +174,7 @@ export function SunIcon(props) {
         </svg>
     );
 }
+
 export function CloseIcon(props) {
     return (
         <svg
