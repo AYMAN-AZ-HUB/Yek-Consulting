@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { LaptopIcon, MenuIcon, SunIcon, CloseIcon } from './icons';
 import { MdOutlineDarkMode } from "react-icons/md";
 import { ThemeContext } from '../contexts/ThemeContext';
+import logo from '../assests/yek.png'
 
 import "./ui/Header.css";
 
@@ -16,10 +17,7 @@ const Header = () => {
                 <MenuIcon className="h-6 w-6" />
             </button>
             <div>
-                <Link to="/" className="flex items-center gap-2">
-                    <LaptopIcon className="h-6 w-6" />
-                    <span className="text-lg font-semibold ">YEK Consulting</span>
-                </Link>
+                <img src={logo} className='h-11 w-32'></img>
             </div>
             <nav className="hidden md:flex items-center gap-6">
                 <ul className="flex">
