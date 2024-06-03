@@ -1,5 +1,6 @@
+import React, { useContext } from 'react';
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import React from "react";
+import { ThemeContext } from '../contexts/ThemeContext'; // Import ThemeContext
 
 const socialMediaIcons = [
   { icon: <FaFacebook size={28} />, link: "#" },
@@ -36,9 +37,11 @@ const footerSections = [
 ];
 
 const Footer = () => {
+  const { theme } = useContext(ThemeContext); // Use the theme context
+
   return (
-    <footer className="bg-gray-900 text-white py-8">
-      <div className="container mx-auto px-4 ">
+    <footer className={`py-8 ${theme === 'dark' ? 'bg-neutral-800	 text-white' : 'bg-slate-100 text-black'}`}>
+      <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center gap-4 pt-4">
           {/* Section 1: Logo and Description */}
           <div className="w-full md:w-1/4 mb-4 text-center pr-20">
@@ -77,13 +80,13 @@ const Footer = () => {
             <h2 className="font-bold mb-3">Newsletter</h2>
             <p>Inscrivez-vous à notre newsletter.</p>
             <form className="mt-4">
-              <input type="email" placeholder="E-mail" className="w-full p-2 mb-4 rounded bg-gray-600 text-white" />
+              <input type="email" placeholder="E-mail" className={`w-full p-2 mb-4 rounded ${theme === 'dark' ? 'bg-gray-600 text-white' : 'bg-gray-100 text-black'}`} />
               <button type="submit" className="bg-blue-500 text-white py-3 w-full rounded hover:bg-blue-600 transition">S'ABONNER</button>
             </form>
           </div>
         </div>
       </div>
-      <div className="text-center mt-8 border-t border-gray-700 pt-4">
+      <div className={`text-center mt-8 border-t ${theme === 'dark' ? 'border-gray-700' : 'border-gray-400'} pt-4`}>
         <p>Copyright © YEK Conseil 2024, Tous droits réservés.</p>
       </div>
     </footer>

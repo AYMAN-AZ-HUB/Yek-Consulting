@@ -6,7 +6,7 @@ const Contactus = () => {
   const backgroundImageUrl = 'https://images.unsplash.com/photo-1487611459768-bd414656ea10?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
   return (
-    <div className={theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'}>
+    <div className={theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}>
       <div
         className={theme === 'dark' ? 'bg-gray-700 py-36 px-4 sm:px-6 lg:px-8 relative' : 'bg-gray-200 py-36 px-4 sm:px-6 lg:px-8 relative'}
         style={{ backgroundImage: `url(${backgroundImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '600px' }}
@@ -46,26 +46,26 @@ const Contactus = () => {
           <input
             type="text"
             placeholder="Votre Nom*"
-            className={`border ${theme === 'dark' ? 'border-gray-800 bg-gray-600 text-white' : 'border-gray-300 bg-white text-black'} p-2 rounded sm:col-span-1`}
+            className={`border ${theme === 'dark' ? 'border-neutral-700 bg-neutral-800	 text-white' : 'border-gray-300 bg-white text-black'} p-2 rounded sm:col-span-1`}
           />
           <input
             type="text"
             placeholder="Société"
-            className={`border ${theme === 'dark' ? 'border-gray-800 bg-gray-600 text-white' : 'border-gray-300 bg-white text-black'} p-2 rounded sm:col-span-1`}
+            className={`border ${theme === 'dark' ? 'border-neutral-700 bg-neutral-800	 text-white' : 'border-gray-300 bg-white text-black'} p-2 rounded sm:col-span-1`}
           />
           <input
             type="email"
             placeholder="Email*"
-            className={`border ${theme === 'dark' ? 'border-gray-800 bg-gray-600 text-white' : 'border-gray-300 bg-white text-black'} p-2 rounded sm:col-span-1`}
+            className={`border ${theme === 'dark' ? 'border-neutral-700 bg-neutral-800	 text-white' : 'border-gray-300 bg-white text-black'} p-2 rounded sm:col-span-1`}
           />
           <input
             type="text"
             placeholder="Sujet*"
-            className={`border ${theme === 'dark' ? 'border-gray-800 bg-gray-600 text-white' : 'border-gray-300 bg-white text-black'} p-2 rounded sm:col-span-1`}
+            className={`border ${theme === 'dark' ? 'border-neutral-700 bg-neutral-800	 text-white' : 'border-gray-300 bg-white text-black'} p-2 rounded sm:col-span-1`}
           />
           <textarea
             placeholder="Votre Message*"
-            className={`border ${theme === 'dark' ? 'border-gray-800 bg-gray-600 text-white' : 'border-gray-300 bg-white text-black'} p-2 rounded sm:col-span-2 min-h-[120px]`}
+            className={`border ${theme === 'dark' ? 'border-neutral-700 bg-neutral-800 	 text-white' : 'border-gray-300 bg-white text-black'} p-2 rounded sm:col-span-2 min-h-[120px]`}
           />
           <button
             type="submit"
@@ -77,7 +77,9 @@ const Contactus = () => {
       </div>
     </div>
   );
-}
+};
+
+
 
 function BuildingIcon(props) {
   return (
